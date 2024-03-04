@@ -17,7 +17,7 @@ def main(name:str,title:str,link:str):
 
         contents = open("my.txt", 'r').read()
         url = "DSLWP"
-        response = session.get(f"{BASE_PROTOCOL}{BASE_URL}")
+        response = session.get("https://rentry.co/")
         cookie = SimpleCookie(response.headers['Set-Cookie'])
         csrftoken = cookie['csrftoken'].value
         payload = {
